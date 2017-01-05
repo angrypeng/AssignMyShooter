@@ -15,9 +15,21 @@ public class csLaser : MonoBehaviour {
 	void Update () {
 		float moveY = moveSpeed * Time.deltaTime;
 		transform.Translate (0, moveY, 0);
+
+		if (transform.position.y > 1.1f) {
+			//Destroy (gameObject);
+		}
 	}
 
 	void OnBecameInvisible(){
 		Destroy (gameObject);
+	}
+
+	void OnTriggerEnter(Collider coll){
+		Debug.Log ("trigger from laser");
+	}
+
+	void OnCollisionEnter(Collision coll){
+		Debug.Log ("collision from laser");
 	}
 }
