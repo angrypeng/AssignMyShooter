@@ -30,7 +30,7 @@ public class SpawnManager : MonoBehaviour {
 			worldPos.z = 0.0f;
 
 			positions [i] = worldPos;
-			Debug.Log (positions [i]);
+			//Debug.Log (positions [i]);
 		}
 	}
 	
